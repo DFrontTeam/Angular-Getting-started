@@ -23,6 +23,12 @@ const routes: Routes = [
     title: 'Formularios',
   },
   {
+    path: 'servicios',
+    loadChildren: () =>
+      import('./services/services.module').then((m) => m.ServicesModule),
+    title: 'Servicios',
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
