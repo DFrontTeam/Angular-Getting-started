@@ -8,6 +8,8 @@
     <input type="text" class="form-control" [(ngModel)]="value">
   </div>
 
-  <app-child [valueChild]="value" (valueSend)="getValueChild($event)" ></app-child>
+  <button class="btn btn-light" (click)="toggleChild()">Mostrar hijo</button>
+
+  <app-child *ngIf="showChild" [valueChild]="value" (valueSend)="getValueChild($event)" ></app-child>
 
 </div>

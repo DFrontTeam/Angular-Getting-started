@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class ComponentsComponent {
 
   value:string;
+  showChild:boolean;
 
   constructor() {
     this.value = "hola";
+    this.showChild = true;
   }
 
   /**
@@ -19,6 +21,13 @@ export class ComponentsComponent {
    */
   getValueChild(event:string):void{
     this.value = event;
+  }
+
+  /**
+   * mostrar u ocultar componente hijo
+   */
+  toggleChild():void{
+    this.showChild = !this.showChild;
   }
 
 }
