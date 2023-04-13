@@ -1,1 +1,13 @@
-<p>components works!</p>
+<div class="container border border-black pb-4 my-4 bg-secondary">
+  <h1 class="display-1 text-center text-white">Componente padre</h1>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Valor del componente padre</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="value">
+  </div>
+
+  <app-child [valueChild]="value" (valueSend)="getValueChild($event)" ></app-child>
+
+</div>

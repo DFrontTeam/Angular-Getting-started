@@ -1,0 +1,14 @@
+<div class="border border-danger p-3 bg-danger">
+  <h1 class="display-1 text-center text-white">Componente hijo</h1>
+
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Valor del componente hijo</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="valueChild">
+  </div>
+
+  <button class="btn btn-light" (click)="send()">Enviar al padre</button>
+
+</div>
